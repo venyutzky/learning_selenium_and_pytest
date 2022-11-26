@@ -33,5 +33,24 @@ class DemoAutoSuggest():
                 time.sleep(4)
                 break
 
+
+        origin = driver.find_element(By.XPATH, " //input[@id='BE_flight_origin_date']")
+        origin.click()
+        time.sleep(2)
+        # driver.find_element(By.XPATH, "//td[@id='08/12/2022']").click()
+        # time.sleep(2)
+
+        all_dates = driver.find_elements(By.XPATH, "//div[@id='monthWrapper']//tbody//td[@class!='inActiveTD']")
+        for date in all_dates:
+            if date.get_attribute("data-date") == "09/12/2022":
+                date.click()
+                time.sleep(2)
+                break
+
+
+
+
+
+
 dauto = DemoAutoSuggest()
 dauto.demo_autosuggest_dropdown()
