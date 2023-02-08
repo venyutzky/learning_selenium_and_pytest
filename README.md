@@ -1,2 +1,2 @@
 # Belajar-Selenium
-Kumpulan dasar-dasar terkait selenium python
+Learning basic things in selenium python and pytest
